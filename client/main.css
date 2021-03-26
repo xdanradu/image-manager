@@ -1,0 +1,53 @@
+#video {
+  border: 1px solid gray;
+  box-shadow: 1px 1px 1px gray;
+  width:620px;
+  height:466px;
+}
+
+#photo {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width:320px;
+  height:240px;
+}
+
+#canvas {
+  display:none;
+}
+
+.camera {
+  width:620px;
+  height:466px;
+  order: 1;
+}
+
+.output {
+  width: 340px;
+  border: 2px solid red;
+  order: 2;
+}
+
+#startbutton {
+  display:block;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  bottom:32px;
+  background-color: rgba(0, 150, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  color: rgba(255, 255, 255, 1.0);
+}
+
+.contentarea {
+  display: flex;
+  font-size: 16px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "cam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "capture.js",
+  "scripts": {
+    "start": "live-server --port=8084 --ignore=PATH\"/server\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
