@@ -2,7 +2,7 @@
   "name": "api",
   "version": "0.0.1",
   "scripts": {
-    "start": "nodemon index.js"
+    "start-server": "nodemon index.js"
   },
   "dependencies": {
     "nodemon": "^2.0.3"
