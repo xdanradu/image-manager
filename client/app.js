@@ -16,11 +16,12 @@ function run() {
             upload: function() {
                 //const file = $('#file')[0].files[0];
                 //upload(file).then(()=>{
-                    this.getImages();
+
                 //});
                 //you need an event handler here to reload the files from the backend -> RxJs Observables?+
                 upload.then(()=>{
                   console.log('up');
+                    this.getImages();
                 })
             },
             remove: function (image) {

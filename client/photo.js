@@ -3,7 +3,7 @@ Vue.component('photo', {
     template: '<div class="photo-container ">' +
         '<div class="photo" :style="{ backgroundImage: `url(${imgsrc})` }"></div>'+
         '<div class="delete-button" v-on:click="remove()">&#10006;</div>'+
-        '<div class="spinner"><div class="lds-ripple" v-if="loading" ><div></div><div></div></div></div>'+
+        '<div class="lds-ripple" v-if="loading" ><div></div><div></div></div>'+
         '</div>',
     data: function() {
         return  {
@@ -24,8 +24,6 @@ Vue.component('photo', {
             axios.delete('http://localhost:3000/images/'+this.filename).then(response => {
                 this.$emit('deleted', 'true')
             });
-
         },
     }
-
 });

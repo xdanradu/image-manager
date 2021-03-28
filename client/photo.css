@@ -42,20 +42,6 @@
     transform: scale(1.2);
 }
 
-
-
-
-
-
-
-.spinner {
-    height: 100px;
-    width: 100px;
-    border-radius:10px;
-    border:1px solid #dedede;
-}
-
-
 .lds-ripple {
     width: 100%;
     height: 100%;
