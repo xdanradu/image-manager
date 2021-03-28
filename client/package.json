@@ -2,9 +2,9 @@
   "name": "cam",
   "version": "1.0.0",
   "description": "",
-  "main": "capture.js",
+  "main": "camera-capture.js",
   "scripts": {
-    "start": "live-server --port=8084 --ignore=PATH\"/server\""
+    "start-client": "live-server --port=8084 --ignore=PATH\"/server\""
   },
   "author": "",
   "license": "ISC",

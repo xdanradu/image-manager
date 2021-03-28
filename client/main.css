@@ -1,3 +1,7 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 #video {
   border: 1px solid gray;
   box-shadow: 1px 1px 1px gray;
@@ -6,10 +10,9 @@
 }
 
 #photo {
-  border: 1px solid black;
-  box-shadow: 2px 2px 3px black;
-  width:320px;
-  height:240px;
+  border: 1px solid #dedede;
+  width:620px;
+  height:466px;
 }
 
 #canvas {
@@ -24,7 +27,6 @@
 
 .output {
   width: 340px;
-  border: 2px solid red;
   order: 2;
 }
 
@@ -50,4 +52,20 @@
   flex-direction: row;
   align-items: flex-start;
   align-content: flex-start;
+}
+
+
+
+
+
+
+
+.photos {
+  margin:20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
 }

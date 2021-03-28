@@ -1,22 +1,76 @@
 <!doctype html>
 <html>
 <head>
-	<title>WebRTC: Still photo capture demo</title>
+	<title>Image Manager</title>
 	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="main.css" type="text/css" media="all">
-	<script type="text/javascript" src="axios.js"></script>
-	<script src="capture.js">
-	</script>
+	<link rel="stylesheet" href="photo.css" type="text/css" media="all">
+	<link rel="stylesheet" href="upload.css" type="text/css" media="all">
+	<script type="text/javascript" src="libs/jquery.js"></script>
+	<script type="text/javascript" src="libs/axios.js"></script>
+	<script type="text/javascript" src="libs/vue.js"></script>
+
+	<script src="photo.js"></script>
+
+	<script src="app.js"></script>
+	<!--
+	<script src="camera-capture.js"></script>
+	-->
+
 </head>
-<body>
+
+
+
+<div class="upload-component">
+	<div class="box" ondrop="drop(event)" ondragover="draggingOver(event)" ondragleave="dragleave(event)">
+		<div class="box__input">
+			<svg class="box__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+			<input class="box__file" onchange="fileAdd(event)" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+			<label for="file" class="file-label"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
+			<button class="box__button" onclick="uploadFile()">Upload</button>
+		</div>
+		<div class="box__uploading">Uploading…</div>
+		<div class="box__success">Done!</div>
+		<div class="box__error">Error! <span></span></div>
+	</div>
+</div>
+
+
+
+<div id="app">
+	<!--<form method="post" enctype="multipart/form-data" action="http://localhost:3000/upload">
+		<input type="file" name="file">
+		<input type="submit" value="Submit">
+	</form>-->
 
 <!--
-<form method="post" enctype="multipart/form-data" action="http://localhost:3000/upload">
-	<input type="file" name="file">
-	<input type="submit" value="Submit">
-</form>
+	<input id="file" type="file" name="file" />
+	<button v-on:click="upload()">Upload</button>
 -->
 
+
+	<div class="photos">
+		<div v-for="image in images" :key="image.id">
+			<photo @deleted="onDeleted" v-bind:path="image.path" v-bind:filename="image.filename"></photo>
+		</div>
+	</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!--
 <div class="contentarea">
 
   <div class="camera">
@@ -30,5 +84,8 @@
     <img id="photo" alt="The screen capture will appear in this box."/>
 	</div>
 </div>
+-->
+
+<script src="upload.js"></script>
 </body>
 </html>
