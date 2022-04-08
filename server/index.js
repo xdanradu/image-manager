@@ -18,12 +18,9 @@ app.use(
 );
 app.use(bodyParser.json({limit: '10mb'}));
 
-
-
 app.get('/', function (request, response) {
     response.json({ message: 'REST API' });
 });
-
 
 const handleError = (err, res) => {
     res
@@ -61,7 +58,6 @@ app.delete('/images/:name', function(request, response) {
 })
 
 app.get('/uploads/:name', function(request, response) {
-
     // let name = 'upload-27-3-2021_19-9-33.png';
     response.sendFile( `${__dirname}/uploads/${request.params.name}`);
     //response.sendFile( __dirname + '/uploads/upload-27-3-2021_19-9-33.png');

@@ -16,16 +16,10 @@
 	<script type="text/javascript" src="libs/vue.js"></script>
 
 	<script src="photo.js"></script>
-
 	<script src="app.js"></script>
-	<!--
 	<script src="camera-capture.js"></script>
-	-->
-
 </head>
-
-
-
+<body>
 <div class="upload-component">
 	<div class="box" ondrop="drop(event)" ondragover="draggingOver(event)" ondragleave="dragleave(event)">
 		<div class="box__input">
@@ -68,14 +62,10 @@
 
 
 
-
-
-<!--
-<div class="contentarea">
-
+<div class="contentarea" style="display:none">
   <div class="camera">
     <video id="video">Video stream not available.</video>
-    <button id="startbutton">Take photo</button> 
+    <button id="startbutton">Take photo</button>
   </div>
 
   <canvas id="canvas"></canvas>
@@ -84,7 +74,7 @@
     <img id="photo" alt="The screen capture will appear in this box."/>
 	</div>
 </div>
--->
+
 
 <script src="upload.js"></script>
 </body>
